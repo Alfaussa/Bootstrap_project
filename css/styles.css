@@ -52,3 +52,6 @@ z-index: 0;
    left: 0;
    min-height:300px;
 }
+.jumbotron .modal {
+    color: #000;
+}
