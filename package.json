@@ -14,15 +14,29 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/*-o dist/img",
     "usemin": "usemin contact.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
-    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run"
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run",
+    "preshrinkwrap": "git checkout -- npm-shrinkwrap.json",
+    "postshrinkwrap": "git checkout -- npm-shrinkwrap.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.29",
     "lite-server": "^2.3.0",
     "node-sass": "^7.0.1",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.1",
+    "require-dir": "^1.2.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
@@ -31,6 +45,7 @@
     "cssmin": "^0.4.3",
     "font-awesome": "^4.7.0",
     "htmlmin": "^0.0.7",
+    "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "uglifyjs": "^2.4.11",
     "usemin-cli": "^0.6.0"
